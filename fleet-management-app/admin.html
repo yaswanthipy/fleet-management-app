@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        #container {
+            display: flex;
+            gap: 20px;
+        }
+        #sidebar {
+            width: 250px;
+            border: 1px solid black;padding: 10px;
+        }
+        #fleetcards {
+            display: flex;flex-wrap: wrap;gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+     <div id="navbar">
+        <select id="filterCategory" >
+            <option value="ALL">ALL</option>
+            <option value="Auto">Auto</option>
+            <option value="Car">Car</option>
+            <option value="Truck">Truck</option>
+            <option value="Bus">Bus</option>
+            </select>
+            <select id ="filterAvail">
+            <option value="ALL">ALL</option>
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+            </select>
+            <button id="clearFilters">Clear Filters</button>
+     </div>
+     <br><br>
+    <div id="container">
+        <!-- sidebar -->
+        <div id="sidebar">
+            <h3>Add Fleet</h3>
+            <input id="reg" type="text" placeholder="Registration No"><br><br>
+            <select id="category">
+                <option value ="">Select Category</option>
+                <option value="Auto">Auto</option>
+                <option value="Car">Car</option>
+                <option value="Truck">Truck</option>
+                <option value="Bus">Bus</option>
+
+            </select><br><br>
+            <input id="driver"type="text" placeholder="Driver Name"><br><br>
+            <select id="available">
+                <option value="">Select Availability</option>
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
+            </select><br><br>
+            
+            <button id="addFleet">Add Fleet</button>
+        </div>
+        <div id="fleetCards"></div>
+        <script src="script.js"></script>
+
+       
+</body>
+</html>
